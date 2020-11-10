@@ -5,15 +5,21 @@
 # When one label is voted, it'll get the voter's weight to the power of a constant as the score the voter gives.
 # The constant can be set below.
 
-import config
 import os
 import csv
 import datetime
 
 # Constants
-PREDICTS_FOR_VOTING_PATH = config.PREDICTS_FOR_VOTING_PATH
+#########################################
+PREDICTS_FOR_VOTING_PATH = ""
 IF_SKIP_FIRST_LINE = True
 PRED_WEIGHT_PARAM = 3
+#########################################
+
+
+if PREDICTS_FOR_VOTING_PATH == "":
+    print("Error: Please set the path to the prediction voting files.")
+    exit()
 
 
 # Judge if filename valid
